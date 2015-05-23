@@ -1,0 +1,57 @@
+---
+title: "Linear Regression Notes"
+author: "Chirag Lakhani"
+date: "May 23, 2015"
+output: pdf_document
+---
+
+---
+
+> We will use the HERS dataset, which is a clinical trial that was used to look at the effects of hormone-therapy on 2,764 post-menopausal women.  For more information see http://pages.pomona.edu/~jsh04747/courses/math150/HERS.pdf
+
+---
+
+setwd(“~/Documents/gitProjects/notes/”)
+
+
+
+# Simple Linear Regression
+
+If one is given a set of points $(x_1,y_1),(x_2,y_2),\ldots,(x_n,y_n) \in \mathbb{R}^2$ where 
+
+- $y$ - response variable
+- $x$ - predictor variable
+
+then linear regression is an approach to modeling the linear relationship between the response and predictor variable.  The model is of the form below:
+
+$$ y = \beta_0 + \beta_1 x $$
+
+The goal will be to calculate the coefficients $\beta_0, \beta_1$ that best fit the data.
+
+
+Using this dataset we will build a linear regression model where BMI is the predictor and LDL cholestrol is the outcome
+
+```{r}
+library(ggplot2)
+hersdata <- read.delim("hersdata.txt")
+head(hersdata[,c('BMI','LDL')])
+```
+
+
+##Derivation of coefficients
+
+##Statistical Inference
+
+# Multiple Linear Regression
+
+##Derivation of coefficients
+
+##Statistical Inference
+
+# Statistical Leverage
+
+# Confounding
+
+# Mediation 
+
+# 
